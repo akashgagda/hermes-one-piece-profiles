@@ -7,5 +7,4 @@ license: "MIT"
 distribution_owned:
   - SOUL.md
   - config.yaml
-  - skins/
   - distribution.yaml

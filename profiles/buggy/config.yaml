@@ -1,5 +1,4 @@
 # Provider and model are intentionally left unset.
 # Hermes resolves them from the installer's own setup.
+# No skin is imposed: the profile keeps whatever skin your Hermes is set to.
 model: ""
-display:
-  skin: buggy

@@ -10,7 +10,6 @@ Each character is a separate Hermes [profile distribution](https://hermes-agent.
 ## What each profile contains
 
 - A substantial `SOUL.md` covering identity, voice, worldview, operating method, strengths, blind spots, pressure behavior, disagreement style, safeguards, and task affinities
-- A character-branded terminal skin
 - A provider-neutral `config.yaml`
 - A standard `distribution.yaml`
 
@@ -18,7 +17,8 @@ No profile ships credentials, memories, sessions, conversation history, a model 
 
 ## The collection
 
-Thirty-one profiles across five groups. Each group has its own palette, so a skin tells you which register you are in:
+Thirty-one profiles across five groups. No profile imposes a skin, so your terminal keeps whatever
+look your own Hermes is set to:
 
 | Series | Members | Work it suits |
 |---|---|---|
@@ -99,7 +99,9 @@ python3 manage.py update monkey-d-luffy nico-robin
 python3 manage.py update --all
 ```
 
-Hermes' distribution updater replaces `SOUL.md` and the skin while preserving local memories, sessions, credentials, and `config.yaml`. Pass `--force-config` if you also want to restore the distribution's skin selection. `manage.py update --pull ...` is a convenience for explicitly opting into the fast-forward before updating.
+Hermes' distribution updater replaces `SOUL.md` while preserving local memories, sessions, credentials, and `config.yaml`. `manage.py update --pull ...` is a convenience for explicitly opting into the fast-forward before updating.
+
+Profiles installed before the skins were removed keep the skin they already have: `skins/` is no longer listed in `distribution_owned`, so an update leaves an existing directory alone. To follow the collection's current behaviour, delete the profile's `skins/` directory and the `display:` block from its `config.yaml`, or install with `manage.py install --force-config`.
 
 Keep the collection checkout if you want native `hermes profile update` to keep working: current Hermes records a local absolute source path for monorepo-selected distributions. Moving the checkout requires reinstalling the affected profiles from the new location. `manage.py install --force` also replaces `config.yaml`; it preserves memories and sessions, not local config overrides.
 
@@ -115,7 +117,7 @@ python3 tools/validate_collection.py           # structural and content checks (
 python3 tools/e2e_collection.py                # install every profile, then update one (needs hermes)
 ```
 
-`tools/check_source.py` imports the same field contract the builder uses, so a file that passes it builds. The validator additionally enforces what the builder cannot: every SOUL is at least 3,000 characters, carries all fourteen required sections and the non-negotiable boundary text, differs from every other profile by substance rather than by name, and that character skins inside a series are actually distinct.
+`tools/check_source.py` imports the same field contract the builder uses, so a file that passes it builds. The validator additionally enforces what the builder cannot: every SOUL is at least 3,000 characters, carries all fourteen required sections and the non-negotiable boundary text, and differs from every other profile by substance rather than by name.
 
 `tools/e2e_collection.py` is guarded on purpose. On Hermes 0.21.x the profiles root resolves from the **default** Hermes home (`~/.hermes/profiles`), not from the `HERMES_HOME` the script sets, so it installs thirty real profiles into a real profile list. It refuses to run without `HERMES_OP_E2E=1`; set that only in a container or on a throwaway machine. CI sets it.
 

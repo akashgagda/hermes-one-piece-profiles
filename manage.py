@@ -145,7 +145,7 @@ def install(args: argparse.Namespace, catalog: list[dict[str, Any]]) -> int:
     if failures:
         print(f"\nFailed: {', '.join(failures)}", file=sys.stderr)
         return 1
-    print("\nInstalled. Start a new session so the SOUL and skin load together.")
+    print("\nInstalled. Start a new session so the SOUL loads.")
     return 0
 
 
@@ -206,7 +206,7 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Fast-forward this collection checkout before updating profiles",
     )
-    update_parser.add_argument("--force-config", action="store_true", help="Replace local profile config and skin selection")
+    update_parser.add_argument("--force-config", action="store_true", help="Replace local profile config")
     return parser
 
 

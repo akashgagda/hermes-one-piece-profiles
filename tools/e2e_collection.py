@@ -71,10 +71,9 @@ def main() -> int:
             installed = home / "profiles" / slug
             soul = (installed / "SOUL.md").read_text(encoding="utf-8")
             config = yaml.safe_load((installed / "config.yaml").read_text(encoding="utf-8"))
-            skin = yaml.safe_load((installed / "skins" / f"{slug}.yaml").read_text(encoding="utf-8"))
             assert persona["name"] in soul
-            assert config == {"model": "", "display": {"skin": slug}}
-            assert skin["branding"]["agent_name"] == persona["name"]
+            assert config == {"model": ""}
+            assert not (installed / "skins").exists()
 
         sample = home / "profiles" / "monkey-d-luffy"
         (sample / "memories" / "MEMORY.md").write_text("LOCAL MEMORY\n", encoding="utf-8")

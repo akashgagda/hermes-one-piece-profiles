@@ -22,84 +22,6 @@ SERIES_LABELS = {
     "Allies-and-Revolutionaries": "allies and revolutionaries",
 }
 
-SERIES_SKINS = {
-    "Straw-Hats": {
-        "banner_border": "#B33A2B",
-        "banner_title": "#F0C24B",
-        "banner_accent": "#D9542B",
-        "banner_dim": "#6B4A3A",
-        "banner_text": "#F7EBD3",
-        "ui_accent": "#F0C24B",
-        "ui_label": "#D9683C",
-        "prompt": "#F7EBD3",
-        "input_rule": "#B33A2B",
-        "response_border": "#F0C24B",
-        "status_bar_bg": "#241512",
-        "session_label": "#F0C24B",
-        "session_border": "#7A3B2C",
-    },
-    "Worst-Generation": {
-        "banner_border": "#3B3E6B",
-        "banner_title": "#B9BCE6",
-        "banner_accent": "#5A5FA8",
-        "banner_dim": "#40425C",
-        "banner_text": "#E8EAF6",
-        "ui_accent": "#A9AFE8",
-        "ui_label": "#7C82C9",
-        "prompt": "#E8EAF6",
-        "input_rule": "#3B3E6B",
-        "response_border": "#B9BCE6",
-        "status_bar_bg": "#171830",
-        "session_label": "#B9BCE6",
-        "session_border": "#4A4E7C",
-    },
-    "Marines": {
-        "banner_border": "#1F4E79",
-        "banner_title": "#E3E9F0",
-        "banner_accent": "#3C7EBB",
-        "banner_dim": "#49607A",
-        "banner_text": "#F2F6FA",
-        "ui_accent": "#D9C07A",
-        "ui_label": "#6FA3D1",
-        "prompt": "#F2F6FA",
-        "input_rule": "#1F4E79",
-        "response_border": "#D9C07A",
-        "status_bar_bg": "#111C26",
-        "session_label": "#D9C07A",
-        "session_border": "#2E5C86",
-    },
-    "Emperors-and-Warlords": {
-        "banner_border": "#7A1F2B",
-        "banner_title": "#E0B75C",
-        "banner_accent": "#A62B36",
-        "banner_dim": "#5C4048",
-        "banner_text": "#F5E7D0",
-        "ui_accent": "#E0B75C",
-        "ui_label": "#C25A63",
-        "prompt": "#F5E7D0",
-        "input_rule": "#7A1F2B",
-        "response_border": "#E0B75C",
-        "status_bar_bg": "#1F1418",
-        "session_label": "#E0B75C",
-        "session_border": "#6B2F38",
-    },
-    "Allies-and-Revolutionaries": {
-        "banner_border": "#2E6B5A",
-        "banner_title": "#BCDCCB",
-        "banner_accent": "#3F8F76",
-        "banner_dim": "#43605A",
-        "banner_text": "#EAF5EF",
-        "ui_accent": "#8FCBB2",
-        "ui_label": "#5FA98D",
-        "prompt": "#EAF5EF",
-        "input_rule": "#2E6B5A",
-        "response_border": "#BCDCCB",
-        "status_bar_bg": "#14201C",
-        "session_label": "#BCDCCB",
-        "session_border": "#3B6D5E",
-    },
-}
-
 
 REQUIRED_FIELDS = {
     "slug",
@@ -301,199 +223,22 @@ def render_manifest(p: dict[str, Any]) -> str:
             "distribution_owned:",
             "  - SOUL.md",
             "  - config.yaml",
-            "  - skins/",
             "  - distribution.yaml",
             "",
         ]
     )
 
 
-def render_config(p: dict[str, Any]) -> str:
+def render_config() -> str:
     return "\n".join(
         [
             "# Provider and model are intentionally left unset.",
             "# Hermes resolves them from the installer's own setup.",
+            "# No skin is imposed: the profile keeps whatever skin your Hermes is set to.",
             "model: \"\"",
-            "display:",
-            f"  skin: {p['slug']}",
             "",
         ]
     )
-
-
-def series_palette(series: str, slug: str) -> dict[str, str]:
-    """Derive a stable per-character palette within the series' visual family."""
-    colors = dict(SERIES_SKINS[series])
-    digest = hashlib.sha256(slug.encode("utf-8")).digest()
-    keys = (
-        "banner_border",
-        "banner_title",
-        "banner_accent",
-        "ui_accent",
-        "ui_label",
-        "response_border",
-    )
-    for index, key in enumerate(keys):
-        base = colors[key].lstrip("#")
-        rgb = [int(base[i:i + 2], 16) for i in (0, 2, 4)]
-        delta = (digest[index] % 25) - 12
-        shifted = [max(0, min(255, component + delta)) for component in rgb]
-        colors[key] = "#" + "".join(f"{component:02X}" for component in shifted)
-    return colors
-
-
-# A spinner verb is a few words shown beside the animation, not a sentence. The
-# three character verbs are therefore mapped from the source fields rather than
-# sliced out of them: reusing an operating_method sentence and cutting it at a
-# fixed width produced labels that ended mid-word ("...from evidence, befo").
-#
-# Keyed by the first word of the phrase the verb comes from, so a source edit that
-# introduces a new opening word fails the build loudly instead of silently
-# truncating. Every value must stay within SPINNER_VERB_MAX.
-SPINNER_VERB_MAX = 32
-SPINNER_VERBS_GENERIC = ("checking assumptions", "assembling the answer")
-
-SPINNER_VERB_BY_LEADING_WORD: dict[str, str] = {
-    "Adversarial": "red-teaming the design",
-    "Ask": "asking first",
-    "Break": "breaking it into steps",
-    "Build": "building on-site",
-    "Building": "building it to last",
-    "Check": "checking inputs",
-    "Choose": "choosing what lasts",
-    "Coaching": "coaching by challenge",
-    "Cold": "assessing coldly",
-    "Cold-start": "starting from cold",
-    "Cutting": "cutting to the objective",
-    "De-escalating": "de-escalating",
-    "Decide": "deciding what done means",
-    "Define": "defining the target",
-    "Designing": "designing for survival",
-    "Diagnosing": "diagnosing the real level",
-    "Establish": "establishing the baseline",
-    "Faithful": "reconstructing faithfully",
-    "Field": "reading the field",
-    "Find": "testing what they can do",
-    "Fix": "fixing the standard",
-    "Foresight": "removing the risk early",
-    "Forward": "scouting ahead",
-    "Getting": "getting it moving",
-    "Go": "going out to look",
-    "Hear": "hearing the real interest",
-    "Holding": "holding the line",
-    "Identify": "naming the unspoken threat",
-    "Immediately": "separating fact from hope",
-    "Inventory": "taking inventory",
-    "Keep": "keeping the record",
-    "List": "listing how it breaks",
-    "Long-horizon": "playing the long game",
-    "Map": "mapping dependencies",
-    "Measure": "measuring the gap",
-    "Mediating": "mediating",
-    "Mediation": "brokering the middle",
-    "Meticulous": "cataloguing closely",
-    "Model": "modelling the next moves",
-    "Name": "naming the reason",
-    "Observation": "catching the details",
-    "Operational": "scheduling the handoffs",
-    "Rapid": "spiking it fast",
-    "Record": "recording provenance",
-    "Relentless": "pursuing it to the end",
-    "Restate": "restating the ask",
-    "Robust": "designing for the real load",
-    "Route": "routing around constraints",
-    "Scoping": "scoping it precisely",
-    "Separate": "splitting account from fact",
-    "Sort": "sorting by what fails first",
-    "Source": "critiquing the source",
-    "Start": "starting from the ground",
-    "State": "stating the real goal",
-    "Study": "studying the structure",
-    "Take": "observing before proposing",
-    "Teach": "teaching by example",
-    "Trace": "tracing to the edge cases",
-    "Triage": "triaging",
-    "Turning": "turning choices into bets",
-    "Verify": "verifying independently",
-    "Watch": "watching before acting",
-    "Work": "working the scene",
-}
-
-# A character whose candidate phrases share an opening word derives fewer than
-# three verbs. These top it back up, in the character's own register.
-SPINNER_VERB_FILLERS: dict[str, tuple[str, ...]] = {
-    "tony-tony-chopper": ("diagnosing the mechanism",),
-}
-
-
-def spinner_verbs_for(p: dict[str, Any]) -> list[str]:
-    """The skin's thinking verbs: three from the character, then two generic.
-
-    De-duplicated, so a character whose first two phrases share an opening word is
-    topped back up from SPINNER_VERB_FILLERS rather than repeating a verb.
-    """
-    verbs: list[str] = []
-    for phrase in (p["operating_method"][0], p["operating_method"][1], p["strengths"][0]):
-        leading = phrase.split()[0].strip(",;:")
-        verb = SPINNER_VERB_BY_LEADING_WORD.get(leading)
-        if verb is None:
-            raise ValueError(
-                f"{p['slug']}: no spinner verb mapped for the leading word {leading!r}; "
-                "add it to SPINNER_VERB_BY_LEADING_WORD"
-            )
-        if len(verb) > SPINNER_VERB_MAX:
-            raise ValueError(
-                f"{p['slug']}: spinner verb {verb!r} is longer than {SPINNER_VERB_MAX} characters"
-            )
-        if verb not in verbs:
-            verbs.append(verb)
-
-    for filler in SPINNER_VERB_FILLERS.get(p["slug"], ()):
-        if len(verbs) == 3:
-            break
-        if len(filler) > SPINNER_VERB_MAX:
-            raise ValueError(
-                f"{p['slug']}: spinner filler {filler!r} is longer than {SPINNER_VERB_MAX} characters"
-            )
-        if filler not in verbs:
-            verbs.append(filler)
-
-    return verbs + list(SPINNER_VERBS_GENERIC)
-
-
-def render_skin(p: dict[str, Any]) -> str:
-    colors = series_palette(p["series"], p["slug"])
-    name = p["name"]
-    spinner_verbs = spinner_verbs_for(p)
-    lines = [
-        f"name: {p['slug']}",
-        f"description: {yaml_quote(name + ' persona skin')}",
-        "colors:",
-    ]
-    lines.extend(f"  {key}: {yaml_quote(value)}" for key, value in colors.items())
-    lines.extend(
-        [
-            "spinner:",
-            "  waiting_faces: [\"[·]\", \"[o]\", \"[O]\", \"[o]\"]",
-            "  thinking_faces: [\"[◇]\", \"[◆]\", \"[◇]\", \"[·]\"]",
-            "  thinking_verbs:",
-        ]
-    )
-    lines.extend(f"    - {yaml_quote(verb)}" for verb in spinner_verbs)
-    lines.extend(
-        [
-            "branding:",
-            f"  agent_name: {yaml_quote(name)}",
-            f"  welcome: {yaml_quote(name + ' profile online. State the objective.')}",
-            f"  goodbye: {yaml_quote('Session closed.')}",
-            f"  response_label: {yaml_quote(' ◇ ' + name + ' ')}",
-            '  prompt_symbol: "◇"',
-            f"  help_header: {yaml_quote(name + ' Command Interface')}",
-            'tool_prefix: "│"',
-            "",
-        ]
-    )
-    return "\n".join(lines)
 
 
 def render_profile_readme(p: dict[str, Any]) -> str:
@@ -580,11 +325,10 @@ def build_to(root: Path) -> list[dict[str, Any]]:
     profiles_dir.mkdir(parents=True)
     for p in personas:
         target = profiles_dir / p["slug"]
-        (target / "skins").mkdir(parents=True)
+        target.mkdir(parents=True, exist_ok=True)
         (target / "distribution.yaml").write_text(render_manifest(p), encoding="utf-8")
         (target / "SOUL.md").write_text(render_soul(p), encoding="utf-8")
-        (target / "config.yaml").write_text(render_config(p), encoding="utf-8")
-        (target / "skins" / f"{p['slug']}.yaml").write_text(render_skin(p), encoding="utf-8")
+        (target / "config.yaml").write_text(render_config(), encoding="utf-8")
         (target / "README.md").write_text(render_profile_readme(p), encoding="utf-8")
     (root / "catalog.json").write_text(json.dumps(personas, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (root / "ROSTER.md").write_text(render_roster(personas), encoding="utf-8")

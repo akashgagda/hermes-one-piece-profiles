@@ -12,10 +12,6 @@ from typing import Any
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from build_collection import SPINNER_VERB_MAX  # noqa: E402
-
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "catalog.json"
 PROFILES = ROOT / "profiles"
@@ -89,7 +85,6 @@ def validate() -> None:
         fail(f"profile directory mismatch: missing={set(slugs)-profile_dirs}, extra={profile_dirs-set(slugs)}")
 
     all_souls: dict[str, str] = {}
-    palettes: dict[str, tuple[str, str, str]] = {}
     for persona in catalog:
         slug = persona["slug"]
         root = PROFILES / slug
@@ -113,31 +108,15 @@ def validate() -> None:
             fail(f"{slug}: unexpected version")
         if manifest.get("author") != "akashgagda":
             fail(f"{slug}: unexpected author")
-        if manifest.get("distribution_owned") != ["SOUL.md", "config.yaml", "skins/", "distribution.yaml"]:
+        if manifest.get("distribution_owned") != ["SOUL.md", "config.yaml", "distribution.yaml"]:
             fail(f"{slug}: unsafe distribution_owned contract")
 
-        config = yaml.safe_load((root / "config.yaml").read_text(encoding="utf-8"))
-        if config != {"model": "", "display": {"skin": slug}}:
-            fail(f"{slug}: config should only select a skin and leave model unset")
+        if (root / "skins").exists():
+            fail(f"{slug}: the collection ships no skins; remove the skins directory")
 
-        skin_path = root / "skins" / f"{slug}.yaml"
-        skin = yaml.safe_load(skin_path.read_text(encoding="utf-8"))
-        if skin.get("name") != slug or skin.get("branding", {}).get("agent_name") != persona["name"]:
-            fail(f"{slug}: skin identity mismatch")
-        verbs = skin.get("spinner", {}).get("thinking_verbs")
-        if not isinstance(verbs, list) or not verbs:
-            fail(f"{slug}: skin has no spinner thinking_verbs")
-        for verb in verbs:
-            if not isinstance(verb, str) or not verb.strip():
-                fail(f"{slug}: empty spinner verb")
-            if len(verb) > SPINNER_VERB_MAX:
-                fail(f"{slug}: spinner verb {verb!r} is longer than {SPINNER_VERB_MAX} characters")
-        colors = skin.get("colors", {})
-        palettes[slug] = (
-            colors.get("banner_border", ""),
-            colors.get("banner_title", ""),
-            colors.get("banner_accent", ""),
-        )
+        config = yaml.safe_load((root / "config.yaml").read_text(encoding="utf-8"))
+        if config != {"model": ""}:
+            fail(f"{slug}: config should leave model unset and impose no skin")
 
         soul = (root / "SOUL.md").read_text(encoding="utf-8")
         if len(soul) < 3000:
@@ -158,12 +137,6 @@ def validate() -> None:
     for slug, text in normalized.items():
         if len(set(text.split())) < 180:
             fail(f"{slug}: vocabulary is too thin for a comprehensive persona")
-
-    for series in EXPECTED_SERIES:
-        members = [p["slug"] for p in catalog if p["series"] == series]
-        unique_palettes = {palettes[slug] for slug in members}
-        if len(unique_palettes) < max(2, len(members) // 2):
-            fail(f"{series}: character skins are insufficiently distinct")
 
     print(f"Validated {len(catalog)} profiles: " + ", ".join(f"{s}={series_counts[s]}" for s in sorted(EXPECTED_SERIES)))
 
