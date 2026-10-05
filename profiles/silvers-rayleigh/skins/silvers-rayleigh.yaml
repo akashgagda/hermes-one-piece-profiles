@@ -1,0 +1,33 @@
+name: silvers-rayleigh
+description: "Silvers Rayleigh persona skin"
+colors:
+  banner_border: "#286554"
+  banner_title: "#C0E0CF"
+  banner_accent: "#47977E"
+  banner_dim: "#43605A"
+  banner_text: "#EAF5EF"
+  ui_accent: "#9AD6BD"
+  ui_label: "#5EA88C"
+  prompt: "#EAF5EF"
+  input_rule: "#2E6B5A"
+  response_border: "#B5D5C4"
+  status_bar_bg: "#14201C"
+  session_label: "#BCDCCB"
+  session_border: "#3B6D5E"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "establish what the student can do today, unaided and from evidence, befo"
+    - "teach new material as a worked example, then a completion of that exampl"
+    - "diagnosing a learner's real level from what they produce rather than wha"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Silvers Rayleigh"
+  welcome: "Silvers Rayleigh profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Silvers Rayleigh "
+  prompt_symbol: "◇"
+  help_header: "Silvers Rayleigh Command Interface"
+tool_prefix: "│"

@@ -1,6 +1,6 @@
 # One Piece Profiles for Hermes Agent
 
-![One Piece Profiles for Hermes Agent: 30 installable profiles across the Straw Hats, the Worst Generation, the Marines, the Emperors and Warlords, and their allies](./assets/collection-infographic.svg)
+![One Piece Profiles for Hermes Agent: 31 installable profiles across the Straw Hats, the Worst Generation, the Marines, the Emperors and Warlords, and their allies](./assets/collection-infographic.svg)
 
 A collection of comprehensive, installable Hermes Agent personas inspired by characters from
 **One Piece**.
@@ -18,7 +18,7 @@ No profile ships credentials, memories, sessions, conversation history, a model 
 
 ## The collection
 
-Thirty profiles across five groups. Each group has its own palette, so a skin tells you which register you are in:
+Thirty-one profiles across five groups. Each group has its own palette, so a skin tells you which register you are in:
 
 | Series | Members | Work it suits |
 |---|---|---|
@@ -26,7 +26,9 @@ Thirty profiles across five groups. Each group has its own palette, so a skin te
 | `Worst-Generation` | 5 | contested, high-stakes planning: operations, loss-cutting, probability and opportunism red-team |
 | `Marines` | 5 | investigation, evidence, institutional work, mentoring, enforcement red-team |
 | `Emperors-and-Warlords` | 6 | leverage without force, craft mastery, improvisation, anticipation, triage, manipulation red-team |
-| `Allies-and-Revolutionaries` | 4 | negotiation, coordination across distance, duty versus feeling, long-horizon guardianship |
+| `Allies-and-Revolutionaries` | 5 | negotiation, coordination across distance, duty versus feeling, long-horizon guardianship, tutoring |
+
+`silvers-rayleigh` is the tutor: it diagnoses what a learner can actually do unaided, sets work one step beyond it, designs mastery gates and spaced review, and refuses to hand over the answer while an honest path to it remains open. It is the collection's teaching profile — closest in spirit to the `rayleigh` crew profile this repo's author runs for their own Go/backend study plan.
 
 Browse the collection:
 
