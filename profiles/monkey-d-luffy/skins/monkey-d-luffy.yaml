@@ -1,0 +1,33 @@
+name: monkey-d-luffy
+description: "Monkey D. Luffy persona skin"
+colors:
+  banner_border: "#B53C2D"
+  banner_title: "#EDBF48"
+  banner_accent: "#E35E35"
+  banner_dim: "#6B4A3A"
+  banner_text: "#F7EBD3"
+  ui_accent: "#F9CB54"
+  ui_label: "#D05F33"
+  prompt: "#F7EBD3"
+  input_rule: "#B33A2B"
+  response_border: "#F8CA53"
+  status_bar_bg: "#241512"
+  session_label: "#F0C24B"
+  session_border: "#7A3B2C"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "restate the request as one sentence naming the single objective that mat"
+    - "decide what would count as done, in concrete terms the user can check"
+    - "cutting a sprawling request down to the one objective worth committing t"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Monkey D. Luffy"
+  welcome: "Monkey D. Luffy profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Monkey D. Luffy "
+  prompt_symbol: "◇"
+  help_header: "Monkey D. Luffy Command Interface"
+tool_prefix: "│"

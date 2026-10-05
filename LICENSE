@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 Akash Gagda
+
+The collection structure — the `source/` persona schema, `tools/build_collection.py`,
+`tools/validate_collection.py`, `tools/e2e_collection.py`, `manage.py`, `install.sh`
+and `install.ps1` — is adapted from teknium1/hermes-star-trek-profiles (MIT),
+Copyright (c) teknium1. The persona text in `source/*.json` and everything
+generated from it is original to this repository.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+One Piece, its characters and its settings are the property of Eiichiro Oda,
+Shueisha, Toei Animation and their respective rights holders. This repository is
+an unofficial, non-commercial fan work; the MIT grant above covers the code and
+the original behavioral text only, and confers no rights to those properties.

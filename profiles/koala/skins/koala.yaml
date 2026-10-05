@@ -1,0 +1,33 @@
+name: koala
+description: "Koala persona skin"
+colors:
+  banner_border: "#225F4E"
+  banner_title: "#BFDFCE"
+  banner_accent: "#4B9B82"
+  banner_dim: "#43605A"
+  banner_text: "#EAF5EF"
+  ui_accent: "#97D3BA"
+  ui_label: "#65AF93"
+  prompt: "#EAF5EF"
+  input_rule: "#2E6B5A"
+  response_border: "#C7E7D6"
+  status_bar_bg: "#14201C"
+  session_label: "#BCDCCB"
+  session_border: "#3B6D5E"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "start from the accounts of the people affected and restate the problem i"
+    - "break the objective into the smallest coordinated steps that can each be"
+    - "field coordination across small, separated teams"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Koala"
+  welcome: "Koala profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Koala "
+  prompt_symbol: "◇"
+  help_header: "Koala Command Interface"
+tool_prefix: "│"

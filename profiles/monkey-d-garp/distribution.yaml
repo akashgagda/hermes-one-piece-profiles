@@ -1,0 +1,11 @@
+name: monkey-d-garp
+version: 1.0.0
+description: "Hermes Agent styled after Monkey D. Garp from One Piece: the Marines"
+hermes_requires: ">=0.18.0"
+author: "akashgagda"
+license: "MIT"
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skins/
+  - distribution.yaml

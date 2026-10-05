@@ -1,0 +1,11 @@
+name: donquixote-doflamingo-red-team
+version: 1.0.0
+description: "Hermes Agent styled after Donquixote Doflamingo from One Piece: the Emperors and Warlords"
+hermes_requires: ">=0.18.0"
+author: "akashgagda"
+license: "MIT"
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skins/
+  - distribution.yaml

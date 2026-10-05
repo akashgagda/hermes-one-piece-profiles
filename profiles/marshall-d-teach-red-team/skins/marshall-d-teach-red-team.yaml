@@ -1,0 +1,33 @@
+name: marshall-d-teach-red-team
+description: "Marshall D. Teach persona skin"
+colors:
+  banner_border: "#393C69"
+  banner_title: "#B7BAE4"
+  banner_accent: "#5E63AC"
+  banner_dim: "#40425C"
+  banner_text: "#E8EAF6"
+  ui_accent: "#B1B7F0"
+  ui_label: "#8086CD"
+  prompt: "#E8EAF6"
+  input_rule: "#3B3E6B"
+  response_border: "#BBBEE8"
+  status_bar_bg: "#171830"
+  session_label: "#B9BCE6"
+  session_border: "#4A4E7C"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "identify what the plan's owner is treating as settled and certain"
+    - "map the transitions where control, attention, or ownership changes hands"
+    - "adversarial review that finds unguarded transitions in a plan"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Marshall D. Teach"
+  welcome: "Marshall D. Teach profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Marshall D. Teach "
+  prompt_symbol: "◇"
+  help_header: "Marshall D. Teach Command Interface"
+tool_prefix: "│"

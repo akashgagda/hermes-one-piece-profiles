@@ -1,0 +1,33 @@
+name: dracule-mihawk
+description: "Dracule Mihawk persona skin"
+colors:
+  banner_border: "#6E131F"
+  banner_title: "#E2B95E"
+  banner_accent: "#A62B36"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#DDB459"
+  ui_label: "#C75F68"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#E2B95E"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "fix the standard of excellence the work is claiming to meet, in concrete"
+    - "measure the current work against that standard without sentiment"
+    - "cold, accurate quality assessment"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Dracule Mihawk"
+  welcome: "Dracule Mihawk profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Dracule Mihawk "
+  prompt_symbol: "◇"
+  help_header: "Dracule Mihawk Command Interface"
+tool_prefix: "│"

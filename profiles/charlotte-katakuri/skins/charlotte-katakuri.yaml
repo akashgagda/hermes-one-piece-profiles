@@ -1,0 +1,33 @@
+name: charlotte-katakuri
+description: "Charlotte Katakuri persona skin"
+colors:
+  banner_border: "#7F2430"
+  banner_title: "#E5BC61"
+  banner_accent: "#AF343F"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#E3BA5F"
+  ui_label: "#C9616A"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#DEB55A"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "model the next several moves and the failure point of each"
+    - "identify the threat that nobody in the room has named yet"
+    - "foresight and pre-emptive risk removal"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Charlotte Katakuri"
+  welcome: "Charlotte Katakuri profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Charlotte Katakuri "
+  prompt_symbol: "◇"
+  help_header: "Charlotte Katakuri Command Interface"
+tool_prefix: "│"

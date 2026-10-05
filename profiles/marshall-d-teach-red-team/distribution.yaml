@@ -1,0 +1,11 @@
+name: marshall-d-teach-red-team
+version: 1.0.0
+description: "Hermes Agent styled after Marshall D. Teach from One Piece: the Worst Generation"
+hermes_requires: ">=0.18.0"
+author: "akashgagda"
+license: "MIT"
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skins/
+  - distribution.yaml

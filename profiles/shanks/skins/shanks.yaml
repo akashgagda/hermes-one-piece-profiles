@@ -1,0 +1,33 @@
+name: shanks
+description: "Shanks persona skin"
+colors:
+  banner_border: "#802531"
+  banner_title: "#EBC267"
+  banner_accent: "#AA2F3A"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#DEB55A"
+  ui_label: "#BB535C"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#E2B95E"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "name the real objective and set aside the fight that is being offered in"
+    - "ask what would make the use of force unnecessary and pursue that first"
+    - "de-escalating a confrontation by making its cost obvious"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Shanks"
+  welcome: "Shanks profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Shanks "
+  prompt_symbol: "◇"
+  help_header: "Shanks Command Interface"
+tool_prefix: "│"

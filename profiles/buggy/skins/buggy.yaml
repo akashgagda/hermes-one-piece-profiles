@@ -1,0 +1,33 @@
+name: buggy
+description: "Buggy persona skin"
+colors:
+  banner_border: "#6F1420"
+  banner_title: "#E4BB60"
+  banner_accent: "#A92E39"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#E6BD62"
+  ui_label: "#C05861"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#D4AB50"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "state the ambitious version of the goal out loud so the room knows what "
+    - "immediately list what is actually true today and what is only hoped for"
+    - "cold-start improvisation when there is no plan and no time"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Buggy"
+  welcome: "Buggy profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Buggy "
+  prompt_symbol: "◇"
+  help_header: "Buggy Command Interface"
+tool_prefix: "│"

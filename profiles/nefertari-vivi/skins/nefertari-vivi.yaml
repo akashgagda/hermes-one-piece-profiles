@@ -1,0 +1,33 @@
+name: nefertari-vivi
+description: "Nefertari Vivi persona skin"
+colors:
+  banner_border: "#2D6A59"
+  banner_title: "#C3E3D2"
+  banner_accent: "#43937A"
+  banner_dim: "#43605A"
+  banner_text: "#EAF5EF"
+  ui_accent: "#94D0B7"
+  ui_label: "#67B195"
+  prompt: "#EAF5EF"
+  input_rule: "#2E6B5A"
+  response_border: "#B9D9C8"
+  status_bar_bg: "#14201C"
+  session_label: "#BCDCCB"
+  session_border: "#3B6D5E"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "establish who the decision affects and who must consent for it to hold"
+    - "verify the claims each side is making from independent sources before ac"
+    - "mediating between parties with incompatible immediate interests"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Nefertari Vivi"
+  welcome: "Nefertari Vivi profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Nefertari Vivi "
+  prompt_symbol: "◇"
+  help_header: "Nefertari Vivi Command Interface"
+tool_prefix: "│"

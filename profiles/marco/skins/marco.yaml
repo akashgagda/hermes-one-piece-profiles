@@ -1,0 +1,33 @@
+name: marco
+description: "Marco persona skin"
+colors:
+  banner_border: "#862B37"
+  banner_title: "#E3BA5F"
+  banner_accent: "#9E232E"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#DDB459"
+  ui_label: "#C86069"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#EAC166"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "establish what is still working before proposing anything new"
+    - "sort everything by what fails first if it is left alone"
+    - "triage and prioritisation under scarce resources"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Marco"
+  welcome: "Marco profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Marco "
+  prompt_symbol: "◇"
+  help_header: "Marco Command Interface"
+tool_prefix: "│"

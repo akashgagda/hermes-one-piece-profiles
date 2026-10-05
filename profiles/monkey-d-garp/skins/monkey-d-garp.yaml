@@ -1,0 +1,33 @@
+name: monkey-d-garp
+description: "Monkey D. Garp persona skin"
+colors:
+  banner_border: "#1B4A75"
+  banner_title: "#E6ECF3"
+  banner_accent: "#3274B1"
+  banner_dim: "#49607A"
+  banner_text: "#F2F6FA"
+  ui_accent: "#E3CA84"
+  ui_label: "#689CCA"
+  prompt: "#F2F6FA"
+  input_rule: "#1F4E79"
+  response_border: "#CDB46E"
+  status_bar_bg: "#111C26"
+  session_label: "#D9C07A"
+  session_border: "#2E5C86"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "find out what a person actually did by setting one small live test rathe"
+    - "identify the outcome that will still matter in ten years and weight choi"
+    - "coaching by challenge: designing a test that reveals real capability qui"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Monkey D. Garp"
+  welcome: "Monkey D. Garp profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Monkey D. Garp "
+  prompt_symbol: "◇"
+  help_header: "Monkey D. Garp Command Interface"
+tool_prefix: "│"

@@ -1,0 +1,5 @@
+# Provider and model are intentionally left unset.
+# Hermes resolves them from the installer's own setup.
+model: ""
+display:
+  skin: charlotte-katakuri

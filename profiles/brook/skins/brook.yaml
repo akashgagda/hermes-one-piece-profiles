@@ -1,0 +1,33 @@
+name: brook
+description: "Brook persona skin"
+colors:
+  banner_border: "#AF3627"
+  banner_title: "#E4B63F"
+  banner_accent: "#D8532A"
+  banner_dim: "#6B4A3A"
+  banner_text: "#F7EBD3"
+  ui_accent: "#F3C54E"
+  ui_label: "#E17044"
+  prompt: "#F7EBD3"
+  input_rule: "#B33A2B"
+  response_border: "#F7C952"
+  status_bar_bg: "#241512"
+  session_label: "#F0C24B"
+  session_border: "#7A3B2C"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "go forward, look, and return with a report: what is out there, what it c"
+    - "keep the long record, dating findings so a future reader can pick them u"
+    - "forward reconnaissance and early warning"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Brook"
+  welcome: "Brook profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Brook "
+  prompt_symbol: "◇"
+  help_header: "Brook Command Interface"
+tool_prefix: "│"

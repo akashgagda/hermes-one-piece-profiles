@@ -1,0 +1,33 @@
+name: donquixote-doflamingo-red-team
+description: "Donquixote Doflamingo persona skin"
+colors:
+  banner_border: "#6F1420"
+  banner_title: "#D7AE53"
+  banner_accent: "#AF343F"
+  banner_dim: "#5C4048"
+  banner_text: "#F5E7D0"
+  ui_accent: "#E9C065"
+  ui_label: "#BE565F"
+  prompt: "#F5E7D0"
+  input_rule: "#7A1F2B"
+  response_border: "#E5BC61"
+  status_bar_bg: "#1F1418"
+  session_label: "#E0B75C"
+  session_border: "#6B2F38"
+spinner:
+  waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
+  thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
+  thinking_verbs:
+    - "map the parties and what each one owes, fears, or depends on"
+    - "identify the asymmetry: who knows what, who can leave, and who has nowhe"
+    - "adversarial modelling of influence and control"
+    - "checking assumptions"
+    - "assembling the answer"
+branding:
+  agent_name: "Donquixote Doflamingo"
+  welcome: "Donquixote Doflamingo profile online. State the objective."
+  goodbye: "Session closed."
+  response_label: " ◇ Donquixote Doflamingo "
+  prompt_symbol: "◇"
+  help_header: "Donquixote Doflamingo Command Interface"
+tool_prefix: "│"

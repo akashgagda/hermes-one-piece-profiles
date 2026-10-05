@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="628" viewBox="0 0 1180 628" font-family="ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="1180" height="628" rx="18" fill="#0e0d12"/>
+<rect x="1" y="1" width="1178" height="626" rx="17" fill="none" stroke="#2a2632"/>
+<text x="40" y="64" fill="#F5EFE2" font-size="30" font-weight="700">One Piece Profiles for Hermes Agent</text>
+<text x="40" y="96" fill="#9c93aa" font-size="15">30 installable persona distributions &#183; 5 groups &#183; one SOUL.md, one skin and one provider-neutral config each</text>
+<text x="40" y="124" fill="#6f687d" font-size="13">Behaviour, not cosplay: each profile changes how the agent reasons, disagrees, handles pressure and finishes work.</text>
+<rect x="26" y="152" width="360" height="396" rx="12" fill="#16141c" stroke="#2a2632"/>
+<rect x="26" y="162" width="4" height="376" rx="2" fill="#F0C24B"/>
+<text x="46" y="182" fill="#F0C24B" font-size="15" font-weight="700">the Straw Hat crew</text>
+<text x="368" y="182" fill="#6f687d" font-size="13" text-anchor="end">10 profiles</text>
+<text x="46" y="208" fill="#F5EFE2" font-size="12.5" font-weight="600">Monkey D. Luffy</text>
+<text x="46" y="221" fill="#8d859c" font-size="10.5">Captain — one objective, all-in, no hedging</text>
+<text x="46" y="242" fill="#F5EFE2" font-size="12.5" font-weight="600">Roronoa Zoro</text>
+<text x="46" y="255" fill="#8d859c" font-size="10.5">First mate — standards, practice ladders, honest readiness</text>
+<text x="46" y="276" fill="#F5EFE2" font-size="12.5" font-weight="600">Nami</text>
+<text x="46" y="289" fill="#8d859c" font-size="10.5">Navigator — routes, costs, negotiation, contingencies</text>
+<text x="46" y="310" fill="#F5EFE2" font-size="12.5" font-weight="600">Usopp</text>
+<text x="46" y="323" fill="#8d859c" font-size="10.5">Sniper — spikes, pre-mortems, claim screening</text>
+<text x="46" y="344" fill="#F5EFE2" font-size="12.5" font-weight="600">Sanji</text>
+<text x="46" y="357" fill="#8d859c" font-size="10.5">Cook — logistics, timing, quality standards</text>
+<text x="46" y="378" fill="#F5EFE2" font-size="12.5" font-weight="600">Tony Tony Chopper</text>
+<text x="46" y="391" fill="#8d859c" font-size="10.5">Doctor — triage, diagnosis discipline, evidence</text>
+<text x="46" y="412" fill="#F5EFE2" font-size="12.5" font-weight="600">Nico Robin</text>
+<text x="46" y="425" fill="#8d859c" font-size="10.5">Archaeologist — hidden context in records, long research</text>
+<text x="46" y="446" fill="#F5EFE2" font-size="12.5" font-weight="600">Franky</text>
+<text x="46" y="459" fill="#8d859c" font-size="10.5">Shipwright — build to last, upgrade cycles, teardown</text>
+<text x="46" y="480" fill="#F5EFE2" font-size="12.5" font-weight="600">Brook</text>
+<text x="46" y="493" fill="#8d859c" font-size="10.5">Musician and scout — archival patience, forward scouting</text>
+<text x="46" y="514" fill="#F5EFE2" font-size="12.5" font-weight="600">Jinbe</text>
+<text x="46" y="527" fill="#8d859c" font-size="10.5">Helmsman — mediation, duty, consensus, calm in storms</text>
+<rect x="410" y="152" width="360" height="226" rx="12" fill="#16141c" stroke="#2a2632"/>
+<rect x="410" y="162" width="4" height="206" rx="2" fill="#B9BCE6"/>
+<text x="430" y="182" fill="#B9BCE6" font-size="15" font-weight="700">the Worst Generation</text>
+<text x="752" y="182" fill="#6f687d" font-size="13" text-anchor="end">5 profiles</text>
+<text x="430" y="208" fill="#F5EFE2" font-size="12.5" font-weight="600">Trafalgar Law</text>
+<text x="430" y="221" fill="#8d859c" font-size="10.5">Surgeon-captain — planned operations, cut losses</text>
+<text x="430" y="242" fill="#F5EFE2" font-size="12.5" font-weight="600">Eustass Kid</text>
+<text x="430" y="255" fill="#8d859c" font-size="10.5">Rival captain — brute-force engineering, no negotiation</text>
+<text x="430" y="276" fill="#F5EFE2" font-size="12.5" font-weight="600">Capone Bege</text>
+<text x="430" y="289" fill="#8d859c" font-size="10.5">Defensive architect — inside ops, small perimeter</text>
+<text x="430" y="310" fill="#F5EFE2" font-size="12.5" font-weight="600">Basil Hawkins</text>
+<text x="430" y="323" fill="#8d859c" font-size="10.5">Probability analyst — expected value, model over-trust</text>
+<text x="430" y="344" fill="#F5EFE2" font-size="12.5" font-weight="600">Marshall D. Teach (red-team)</text>
+<text x="430" y="357" fill="#8d859c" font-size="10.5">Opportunism red-team — how timing gets exploited</text>
+<rect x="794" y="152" width="360" height="226" rx="12" fill="#16141c" stroke="#2a2632"/>
+<rect x="794" y="162" width="4" height="206" rx="2" fill="#E3E9F0"/>
+<text x="814" y="182" fill="#E3E9F0" font-size="15" font-weight="700">the Marines</text>
+<text x="1136" y="182" fill="#6f687d" font-size="13" text-anchor="end">5 profiles</text>
+<text x="814" y="208" fill="#F5EFE2" font-size="12.5" font-weight="600">Monkey D. Garp</text>
+<text x="814" y="221" fill="#8d859c" font-size="10.5">Veteran instructor — mentoring by playful testing</text>
+<text x="814" y="242" fill="#F5EFE2" font-size="12.5" font-weight="600">Smoker</text>
+<text x="814" y="255" fill="#8d859c" font-size="10.5">Field investigator — pursuit, distrust of narratives</text>
+<text x="814" y="276" fill="#F5EFE2" font-size="12.5" font-weight="600">Tashigi</text>
+<text x="814" y="289" fill="#8d859c" font-size="10.5">Officer and curator — cataloguing, evidence discipline</text>
+<text x="814" y="310" fill="#F5EFE2" font-size="12.5" font-weight="600">Koby</text>
+<text x="814" y="323" fill="#8d859c" font-size="10.5">Junior officer — observation, de-escalation, moral nerve</text>
+<text x="814" y="344" fill="#F5EFE2" font-size="12.5" font-weight="600">Sakazuki (red-team)</text>
+<text x="814" y="357" fill="#8d859c" font-size="10.5">Enforcement red-team — rules without proportion</text>
+<rect x="26" y="566" width="360" height="260" rx="12" fill="#16141c" stroke="#2a2632"/>
+<rect x="26" y="576" width="4" height="240" rx="2" fill="#E0B75C"/>
+<text x="46" y="596" fill="#E0B75C" font-size="15" font-weight="700">the Emperors and Warlords</text>
+<text x="368" y="596" fill="#6f687d" font-size="13" text-anchor="end">6 profiles</text>
+<text x="46" y="622" fill="#F5EFE2" font-size="12.5" font-weight="600">Shanks</text>
+<text x="46" y="635" fill="#8d859c" font-size="10.5">Emperor — deterrence, influence without force</text>
+<text x="46" y="656" fill="#F5EFE2" font-size="12.5" font-weight="600">Dracule Mihawk</text>
+<text x="46" y="669" fill="#8d859c" font-size="10.5">Master craftsman — precision, mastery standards</text>
+<text x="46" y="690" fill="#F5EFE2" font-size="12.5" font-weight="600">Buggy</text>
+<text x="46" y="703" fill="#8d859c" font-size="10.5">Improviser — branding, luck arbitrage, charm</text>
+<text x="46" y="724" fill="#F5EFE2" font-size="12.5" font-weight="600">Charlotte Katakuri</text>
+<text x="46" y="737" fill="#8d859c" font-size="10.5">Senior commander — anticipation, ruthless efficiency</text>
+<text x="46" y="758" fill="#F5EFE2" font-size="12.5" font-weight="600">Marco</text>
+<text x="46" y="771" fill="#8d859c" font-size="10.5">Division commander — triage, resilience, no ego</text>
+<text x="46" y="792" fill="#F5EFE2" font-size="12.5" font-weight="600">Donquixote Doflamingo (red-team)</text>
+<text x="46" y="805" fill="#8d859c" font-size="10.5">Manipulation red-team — leverage and debt</text>
+<rect x="410" y="566" width="360" height="192" rx="12" fill="#16141c" stroke="#2a2632"/>
+<rect x="410" y="576" width="4" height="172" rx="2" fill="#BCDCCB"/>
+<text x="430" y="596" fill="#BCDCCB" font-size="15" font-weight="700">allies and revolutionaries</text>
+<text x="752" y="596" fill="#6f687d" font-size="13" text-anchor="end">4 profiles</text>
+<text x="430" y="622" fill="#F5EFE2" font-size="12.5" font-weight="600">Sabo</text>
+<text x="430" y="635" fill="#8d859c" font-size="10.5">Chief of staff — precision ops across dispersed cells</text>
+<text x="430" y="656" fill="#F5EFE2" font-size="12.5" font-weight="600">Koala</text>
+<text x="430" y="669" fill="#8d859c" font-size="10.5">Field officer — coordination, training regime, empathy</text>
+<text x="430" y="690" fill="#F5EFE2" font-size="12.5" font-weight="600">Nefertari Vivi</text>
+<text x="430" y="703" fill="#8d859c" font-size="10.5">Royal diplomat — negotiation, duty versus feeling</text>
+<text x="430" y="724" fill="#F5EFE2" font-size="12.5" font-weight="600">Yamato</text>
+<text x="430" y="737" fill="#8d859c" font-size="10.5">Guardian — chosen duty, endurance, long watch</text>
+<text x="1140" y="604" fill="#6f687d" font-size="11.5" text-anchor="end">unofficial fan-made collection &#183; MIT &#183; ships no model, credentials, memories or sessions</text>
+</svg>
