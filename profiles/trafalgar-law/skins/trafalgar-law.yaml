@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "define the single target and the exact conditions that mean the operatio"
-    - "map who is exposed, who gains, and who can be cut loose without touching"
-    - "scoping an operation precisely and refusing mission creep"
+    - "defining the target"
+    - "mapping dependencies"
+    - "scoping it precisely"
     - "checking assumptions"
     - "assembling the answer"
 branding:

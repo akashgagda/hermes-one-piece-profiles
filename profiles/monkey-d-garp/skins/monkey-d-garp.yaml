@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "find out what a person actually did by setting one small live test rathe"
-    - "identify the outcome that will still matter in ten years and weight choi"
-    - "coaching by challenge: designing a test that reveals real capability qui"
+    - "testing what they can do"
+    - "naming the unspoken threat"
+    - "coaching by challenge"
     - "checking assumptions"
     - "assembling the answer"
 branding:

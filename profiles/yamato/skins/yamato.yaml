@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "ask what must be held, from whom, and for how long, before committing to"
-    - "name the reason the watch matters and check that it still holds as circu"
-    - "holding a commitment steady through a long, low-feedback stretch"
+    - "asking first"
+    - "naming the reason"
+    - "holding the line"
     - "checking assumptions"
     - "assembling the answer"
 branding:

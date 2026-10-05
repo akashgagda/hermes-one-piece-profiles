@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "restate the request as one sentence naming the single objective that mat"
-    - "decide what would count as done, in concrete terms the user can check"
-    - "cutting a sprawling request down to the one objective worth committing t"
+    - "restating the ask"
+    - "deciding what done means"
+    - "cutting to the objective"
     - "checking assumptions"
     - "assembling the answer"
 branding:

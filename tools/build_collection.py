@@ -342,16 +342,129 @@ def series_palette(series: str, slug: str) -> dict[str, str]:
     return colors
 
 
+# A spinner verb is a few words shown beside the animation, not a sentence. The
+# three character verbs are therefore mapped from the source fields rather than
+# sliced out of them: reusing an operating_method sentence and cutting it at a
+# fixed width produced labels that ended mid-word ("...from evidence, befo").
+#
+# Keyed by the first word of the phrase the verb comes from, so a source edit that
+# introduces a new opening word fails the build loudly instead of silently
+# truncating. Every value must stay within SPINNER_VERB_MAX.
+SPINNER_VERB_MAX = 32
+SPINNER_VERBS_GENERIC = ("checking assumptions", "assembling the answer")
+
+SPINNER_VERB_BY_LEADING_WORD: dict[str, str] = {
+    "Adversarial": "red-teaming the design",
+    "Ask": "asking first",
+    "Break": "breaking it into steps",
+    "Build": "building on-site",
+    "Building": "building it to last",
+    "Check": "checking inputs",
+    "Choose": "choosing what lasts",
+    "Coaching": "coaching by challenge",
+    "Cold": "assessing coldly",
+    "Cold-start": "starting from cold",
+    "Cutting": "cutting to the objective",
+    "De-escalating": "de-escalating",
+    "Decide": "deciding what done means",
+    "Define": "defining the target",
+    "Designing": "designing for survival",
+    "Diagnosing": "diagnosing the real level",
+    "Establish": "establishing the baseline",
+    "Faithful": "reconstructing faithfully",
+    "Field": "reading the field",
+    "Find": "testing what they can do",
+    "Fix": "fixing the standard",
+    "Foresight": "removing the risk early",
+    "Forward": "scouting ahead",
+    "Getting": "getting it moving",
+    "Go": "going out to look",
+    "Hear": "hearing the real interest",
+    "Holding": "holding the line",
+    "Identify": "naming the unspoken threat",
+    "Immediately": "separating fact from hope",
+    "Inventory": "taking inventory",
+    "Keep": "keeping the record",
+    "List": "listing how it breaks",
+    "Long-horizon": "playing the long game",
+    "Map": "mapping dependencies",
+    "Measure": "measuring the gap",
+    "Mediating": "mediating",
+    "Mediation": "brokering the middle",
+    "Meticulous": "cataloguing closely",
+    "Model": "modelling the next moves",
+    "Name": "naming the reason",
+    "Observation": "catching the details",
+    "Operational": "scheduling the handoffs",
+    "Rapid": "spiking it fast",
+    "Record": "recording provenance",
+    "Relentless": "pursuing it to the end",
+    "Restate": "restating the ask",
+    "Robust": "designing for the real load",
+    "Route": "routing around constraints",
+    "Scoping": "scoping it precisely",
+    "Separate": "splitting account from fact",
+    "Sort": "sorting by what fails first",
+    "Source": "critiquing the source",
+    "Start": "starting from the ground",
+    "State": "stating the real goal",
+    "Study": "studying the structure",
+    "Take": "observing before proposing",
+    "Teach": "teaching by example",
+    "Trace": "tracing to the edge cases",
+    "Triage": "triaging",
+    "Turning": "turning choices into bets",
+    "Verify": "verifying independently",
+    "Watch": "watching before acting",
+    "Work": "working the scene",
+}
+
+# A character whose candidate phrases share an opening word derives fewer than
+# three verbs. These top it back up, in the character's own register.
+SPINNER_VERB_FILLERS: dict[str, tuple[str, ...]] = {
+    "tony-tony-chopper": ("diagnosing the mechanism",),
+}
+
+
+def spinner_verbs_for(p: dict[str, Any]) -> list[str]:
+    """The skin's thinking verbs: three from the character, then two generic.
+
+    De-duplicated, so a character whose first two phrases share an opening word is
+    topped back up from SPINNER_VERB_FILLERS rather than repeating a verb.
+    """
+    verbs: list[str] = []
+    for phrase in (p["operating_method"][0], p["operating_method"][1], p["strengths"][0]):
+        leading = phrase.split()[0].strip(",;:")
+        verb = SPINNER_VERB_BY_LEADING_WORD.get(leading)
+        if verb is None:
+            raise ValueError(
+                f"{p['slug']}: no spinner verb mapped for the leading word {leading!r}; "
+                "add it to SPINNER_VERB_BY_LEADING_WORD"
+            )
+        if len(verb) > SPINNER_VERB_MAX:
+            raise ValueError(
+                f"{p['slug']}: spinner verb {verb!r} is longer than {SPINNER_VERB_MAX} characters"
+            )
+        if verb not in verbs:
+            verbs.append(verb)
+
+    for filler in SPINNER_VERB_FILLERS.get(p["slug"], ()):
+        if len(verbs) == 3:
+            break
+        if len(filler) > SPINNER_VERB_MAX:
+            raise ValueError(
+                f"{p['slug']}: spinner filler {filler!r} is longer than {SPINNER_VERB_MAX} characters"
+            )
+        if filler not in verbs:
+            verbs.append(filler)
+
+    return verbs + list(SPINNER_VERBS_GENERIC)
+
+
 def render_skin(p: dict[str, Any]) -> str:
     colors = series_palette(p["series"], p["slug"])
     name = p["name"]
-    spinner_verbs = [
-        p["operating_method"][0].rstrip(".").lower(),
-        p["operating_method"][1].rstrip(".").lower(),
-        p["strengths"][0].rstrip(".").lower(),
-        "checking assumptions",
-        "assembling the answer",
-    ]
+    spinner_verbs = spinner_verbs_for(p)
     lines = [
         f"name: {p['slug']}",
         f"description: {yaml_quote(name + ' persona skin')}",
@@ -366,7 +479,7 @@ def render_skin(p: dict[str, Any]) -> str:
             "  thinking_verbs:",
         ]
     )
-    lines.extend(f"    - {yaml_quote(verb[:72])}" for verb in spinner_verbs)
+    lines.extend(f"    - {yaml_quote(verb)}" for verb in spinner_verbs)
     lines.extend(
         [
             "branding:",

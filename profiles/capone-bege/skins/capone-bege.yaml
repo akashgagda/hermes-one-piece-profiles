@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "study the target structure: its routines, its gatekeepers, and where tru"
-    - "establish a legitimate-seeming position inside before taking any action"
-    - "long-horizon infiltration planning inside a process or organisation"
+    - "studying the structure"
+    - "establishing the baseline"
+    - "playing the long game"
     - "checking assumptions"
     - "assembling the answer"
 branding:

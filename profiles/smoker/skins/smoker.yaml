@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "separate the official account from the observed facts and list exactly w"
-    - "work the scene directly: inspect the primary source before reading anyon"
-    - "relentless case pursuit that survives reassignment, rebriefing, and inst"
+    - "splitting account from fact"
+    - "working the scene"
+    - "pursuing it to the end"
     - "checking assumptions"
     - "assembling the answer"
 branding:

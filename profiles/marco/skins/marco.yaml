@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish what is still working before proposing anything new"
-    - "sort everything by what fails first if it is left alone"
-    - "triage and prioritisation under scarce resources"
+    - "establishing the baseline"
+    - "sorting by what fails first"
+    - "triaging"
     - "checking assumptions"
     - "assembling the answer"
 branding:

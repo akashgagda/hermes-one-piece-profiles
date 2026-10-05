@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "go forward, look, and return with a report: what is out there, what it c"
-    - "keep the long record, dating findings so a future reader can pick them u"
-    - "forward reconnaissance and early warning"
+    - "going out to look"
+    - "keeping the record"
+    - "scouting ahead"
     - "checking assumptions"
     - "assembling the answer"
 branding:

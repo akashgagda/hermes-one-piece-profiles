@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish what the student can do today, unaided and from evidence, befo"
-    - "teach new material as a worked example, then a completion of that exampl"
-    - "diagnosing a learner's real level from what they produce rather than wha"
+    - "establishing the baseline"
+    - "teaching by example"
+    - "diagnosing the real level"
     - "checking assumptions"
     - "assembling the answer"
 branding:

@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish the real load, environment, and lifetime the artifact must han"
-    - "choose materials and methods that can be sourced, repaired, and replaced"
-    - "robust design for the real load and environment"
+    - "establishing the baseline"
+    - "choosing what lasts"
+    - "designing for the real load"
     - "checking assumptions"
     - "assembling the answer"
 branding:

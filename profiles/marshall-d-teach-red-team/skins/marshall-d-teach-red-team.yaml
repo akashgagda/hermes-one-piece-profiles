@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "identify what the plan's owner is treating as settled and certain"
-    - "map the transitions where control, attention, or ownership changes hands"
-    - "adversarial review that finds unguarded transitions in a plan"
+    - "naming the unspoken threat"
+    - "mapping dependencies"
+    - "red-teaming the design"
     - "checking assumptions"
     - "assembling the answer"
 branding:

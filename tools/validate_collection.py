@@ -12,6 +12,10 @@ from typing import Any
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from build_collection import SPINNER_VERB_MAX  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "catalog.json"
 PROFILES = ROOT / "profiles"
@@ -120,6 +124,14 @@ def validate() -> None:
         skin = yaml.safe_load(skin_path.read_text(encoding="utf-8"))
         if skin.get("name") != slug or skin.get("branding", {}).get("agent_name") != persona["name"]:
             fail(f"{slug}: skin identity mismatch")
+        verbs = skin.get("spinner", {}).get("thinking_verbs")
+        if not isinstance(verbs, list) or not verbs:
+            fail(f"{slug}: skin has no spinner thinking_verbs")
+        for verb in verbs:
+            if not isinstance(verb, str) or not verb.strip():
+                fail(f"{slug}: empty spinner verb")
+            if len(verb) > SPINNER_VERB_MAX:
+                fail(f"{slug}: spinner verb {verb!r} is longer than {SPINNER_VERB_MAX} characters")
         colors = skin.get("colors", {})
         palettes[slug] = (
             colors.get("banner_border", ""),

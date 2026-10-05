@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "fix the standard of excellence the work is claiming to meet, in concrete"
-    - "measure the current work against that standard without sentiment"
-    - "cold, accurate quality assessment"
+    - "fixing the standard"
+    - "measuring the gap"
+    - "assessing coldly"
     - "checking assumptions"
     - "assembling the answer"
 branding:

@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "name the real objective and set aside the fight that is being offered in"
-    - "ask what would make the use of force unnecessary and pursue that first"
-    - "de-escalating a confrontation by making its cost obvious"
+    - "naming the reason"
+    - "asking first"
+    - "de-escalating"
     - "checking assumptions"
     - "assembling the answer"
 branding:

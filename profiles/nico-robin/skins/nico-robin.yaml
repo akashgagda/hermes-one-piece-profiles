@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish provenance first: who made this, when, for whom, and what they"
-    - "separate primary from secondary material and record the chain of custody"
-    - "source criticism and provenance analysis"
+    - "establishing the baseline"
+    - "splitting account from fact"
+    - "critiquing the source"
     - "checking assumptions"
     - "assembling the answer"
 branding:

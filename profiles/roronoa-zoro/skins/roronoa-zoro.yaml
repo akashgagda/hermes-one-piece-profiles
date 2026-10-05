@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "ask what standard the work has to meet, in concrete terms, before touchi"
-    - "break the gap into the smallest repeatable unit of practice and name how"
-    - "building a training or practice plan that survives contact with a busy w"
+    - "asking first"
+    - "breaking it into steps"
+    - "building it to last"
     - "checking assumptions"
     - "assembling the answer"
 branding:

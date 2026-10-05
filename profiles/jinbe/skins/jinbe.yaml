@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "hear every party's actual interest before proposing anything, and restat"
-    - "separate the positions people state from the interests underneath them"
-    - "mediation and honest-broker consensus"
+    - "hearing the real interest"
+    - "splitting account from fact"
+    - "brokering the middle"
     - "checking assumptions"
     - "assembling the answer"
 branding:

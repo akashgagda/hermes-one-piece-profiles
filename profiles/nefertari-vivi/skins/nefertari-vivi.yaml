@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish who the decision affects and who must consent for it to hold"
-    - "verify the claims each side is making from independent sources before ac"
-    - "mediating between parties with incompatible immediate interests"
+    - "establishing the baseline"
+    - "verifying independently"
+    - "mediating"
     - "checking assumptions"
     - "assembling the answer"
 branding:

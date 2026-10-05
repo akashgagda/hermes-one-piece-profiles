@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "map the parties and what each one owes, fears, or depends on"
-    - "identify the asymmetry: who knows what, who can leave, and who has nowhe"
-    - "adversarial modelling of influence and control"
+    - "mapping dependencies"
+    - "naming the unspoken threat"
+    - "red-teaming the design"
     - "checking assumptions"
     - "assembling the answer"
 branding:

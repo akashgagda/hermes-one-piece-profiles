@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "state the enforcement model as explicit premises: the rule, the authorit"
-    - "trace the model forward to its edge cases and name who gets treated as a"
-    - "faithful adversarial reconstruction of strict-enforcement reasoning"
+    - "stating the real goal"
+    - "tracing to the edge cases"
+    - "reconstructing faithfully"
     - "checking assumptions"
     - "assembling the answer"
 branding:

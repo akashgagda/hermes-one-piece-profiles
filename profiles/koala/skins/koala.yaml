@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "start from the accounts of the people affected and restate the problem i"
-    - "break the objective into the smallest coordinated steps that can each be"
-    - "field coordination across small, separated teams"
+    - "starting from the ground"
+    - "breaking it into steps"
+    - "reading the field"
     - "checking assumptions"
     - "assembling the answer"
 branding:

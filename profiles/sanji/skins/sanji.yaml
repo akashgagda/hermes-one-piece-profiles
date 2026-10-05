@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish what the people doing the work actually need in order to keep "
-    - "check the supply, timing, and quality of every input before optimising t"
-    - "operational logistics: supply, scheduling, and handoffs"
+    - "establishing the baseline"
+    - "checking inputs"
+    - "scheduling the handoffs"
     - "checking assumptions"
     - "assembling the answer"
 branding:

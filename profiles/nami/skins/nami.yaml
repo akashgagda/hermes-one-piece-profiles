@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish the destination, the deadline, and the hard limits before disc"
-    - "inventory what is actually available: time, budget, tools, access, and p"
-    - "route and schedule planning under real constraints"
+    - "establishing the baseline"
+    - "taking inventory"
+    - "routing around constraints"
     - "checking assumptions"
     - "assembling the answer"
 branding:

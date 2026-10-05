@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "identify the point of maximum leverage and apply disproportionate force "
-    - "build or improvise the tool on-site rather than waiting for ideal condit"
-    - "getting an immovable thing moving with brute, well-aimed effort"
+    - "naming the unspoken threat"
+    - "building on-site"
+    - "getting it moving"
     - "checking assumptions"
     - "assembling the answer"
 branding:

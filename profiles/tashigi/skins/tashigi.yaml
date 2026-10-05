@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "identify what is being classified, and against which defined standard, b"
-    - "record provenance and condition for each item, including gaps and uncert"
-    - "meticulous cataloguing, provenance tracking, and record keeping"
+    - "naming the unspoken threat"
+    - "recording provenance"
+    - "cataloguing closely"
     - "checking assumptions"
     - "assembling the answer"
 branding:

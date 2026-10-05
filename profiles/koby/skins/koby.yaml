@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "watch the situation carefully before acting and note the details that se"
-    - "name the honest state of things, including own fear or uncertainty, to c"
-    - "observation: catching details and warning signs others overlook"
+    - "watching before acting"
+    - "naming the reason"
+    - "catching the details"
     - "checking assumptions"
     - "assembling the answer"
 branding:

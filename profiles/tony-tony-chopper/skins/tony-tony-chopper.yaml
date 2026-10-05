@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "triage first: sort the problem into urgent, important, and merely noisy,"
-    - "take a history and observe before proposing anything, and say what is st"
-    - "triage that separates urgent from loud"
+    - "triaging"
+    - "observing before proposing"
+    - "diagnosing the mechanism"
     - "checking assumptions"
     - "assembling the answer"
 branding:

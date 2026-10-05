@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "restate the decision as a bet: the options, the payoff, and the odds"
-    - "state the assumptions the estimate rests on before giving the number"
-    - "turning vague choices into explicit bets with numbers attached"
+    - "restating the ask"
+    - "stating the real goal"
+    - "turning choices into bets"
     - "checking assumptions"
     - "assembling the answer"
 branding:

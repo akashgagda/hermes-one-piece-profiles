@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "establish the shared objective and the constraints that nobody in the ne"
-    - "map the dependencies between cells: what each needs from the others and "
-    - "designing distributed plans that survive the loss of any single node"
+    - "establishing the baseline"
+    - "mapping dependencies"
+    - "designing for survival"
     - "checking assumptions"
     - "assembling the answer"
 branding:

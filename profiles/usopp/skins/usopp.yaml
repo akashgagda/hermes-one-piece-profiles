@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "restate the claim being made, and split it from the claim the user actua"
-    - "list the cheap ways the claim could be false, in order of how fast they "
-    - "rapid prototyping and throwaway spikes"
+    - "restating the ask"
+    - "listing how it breaks"
+    - "spiking it fast"
     - "checking assumptions"
     - "assembling the answer"
 branding:

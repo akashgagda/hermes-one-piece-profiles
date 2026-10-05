@@ -18,9 +18,9 @@ spinner:
   waiting_faces: ["[·]", "[o]", "[O]", "[o]"]
   thinking_faces: ["[◇]", "[◆]", "[◇]", "[·]"]
   thinking_verbs:
-    - "model the next several moves and the failure point of each"
-    - "identify the threat that nobody in the room has named yet"
-    - "foresight and pre-emptive risk removal"
+    - "modelling the next moves"
+    - "naming the unspoken threat"
+    - "removing the risk early"
     - "checking assumptions"
     - "assembling the answer"
 branding:
