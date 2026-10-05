@@ -73,7 +73,9 @@ def main() -> int:
             config = yaml.safe_load((installed / "config.yaml").read_text(encoding="utf-8"))
             assert persona["name"] in soul
             assert config == {"model": ""}
-            assert not (installed / "skins").exists()
+            # Hermes bootstraps an empty skins/ dir in every fresh profile (profiles._PROFILE_DIRS),
+            # so its existence is expected. A failure is the *distribution* shipping a skin file.
+            assert not list((installed / "skins").glob("*.yaml")), f"{slug} installed a skin"
 
         sample = home / "profiles" / "monkey-d-luffy"
         (sample / "memories" / "MEMORY.md").write_text("LOCAL MEMORY\n", encoding="utf-8")
@@ -82,7 +84,7 @@ def main() -> int:
         proc = run([hermes, "profile", "update", "monkey-d-luffy", "-y"], env=env)
         if proc.returncode:
             raise SystemExit(f"Update failed:\n{proc.stdout}\n{proc.stderr}")
-        assert "straw-hat" in (sample / "SOUL.md").read_text(encoding="utf-8").lower()
+        assert "straw hat" in (sample / "SOUL.md").read_text(encoding="utf-8").lower()
         assert "local-model" in (sample / "config.yaml").read_text(encoding="utf-8")
         assert (sample / "memories" / "MEMORY.md").read_text(encoding="utf-8") == "LOCAL MEMORY\n"
 
